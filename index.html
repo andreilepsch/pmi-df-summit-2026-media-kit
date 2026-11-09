@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Logos, posts, cards dos palestrantes, PDFs e textos prontos do PMI-DF Summit 2026. 9 e 10 de novembro, Brasília.">
+<meta property="og:title" content="Media Kit PMI-DF Summit 2026">
+<meta property="og:description" content="Logos, posts, cards dos palestrantes, PDFs e textos prontos. 9 e 10 de novembro de 2026, Brasília.">
+<meta property="og:image" content="previews/eu-vou-feed-1080x1350.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/logo-pmi-df-branco.png">
+<title>Media Kit PMI-DF Summit 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Outfit:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: event-poster hero (Brasília photo + skewed bands), then a download shelf per material type. Single dark theme, it is the event's own look. */
+  :root {
+    --night: #0b0826;
+    --panel: #15103a;
+    --line: #2a2260;
+    --violet: #5207cc;
+    --cyan: #1ac7ff;
+    --orange: #ff610f;
+    --fg: #ffffff;
+    --muted: #b8b1d6;
+    --display: "Montserrat", "Arial Black", system-ui, sans-serif;
+    --body: "Outfit", "Segoe UI", system-ui, sans-serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--night); color: var(--fg); font: 400 16px/1.55 var(--body); }
+  .wrap { max-width: 1160px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+
+  /* hero */
+  .hero { position: relative; overflow: hidden; }
+  .hero .ph { position: absolute; inset: 0; background: url(img/brasilia.jpg) 72% 40% / cover no-repeat; }
+  .hero .ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,8,38,.6) 0%, rgba(11,8,38,.25) 40%, var(--night) 100%), linear-gradient(90deg, rgba(11,8,38,.7) 0%, rgba(11,8,38,0) 60%); }
+  .hero .wrap { position: relative; padding-block: 28px 56px; }
+  .logos { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .logos .s { width: clamp(150px, 26vw, 250px); }
+  .logos .p { height: clamp(40px, 6vw, 64px); }
+  .bands { margin-top: clamp(56px, 10vw, 110px); display: flex; flex-direction: column; align-items: flex-start; }
+  .band { position: relative; display: inline-block; padding: 8px clamp(18px, 3vw, 34px); }
+  .band::before { content: ""; position: absolute; inset: 0; transform: skewX(-10deg); z-index: 0; }
+  .band > * { position: relative; }
+  .band.c::before { background: var(--cyan); }
+  .band.v::before { background: var(--violet); }
+  .band h1 { font-weight: 900; font-size: clamp(44px, 9vw, 104px); line-height: 1; letter-spacing: -0.02em; }
+  .band.v { margin-left: clamp(24px, 5vw, 60px); }
+  .band.v span { font: 800 clamp(16px, 2.6vw, 26px)/1.2 var(--display); }
+  .meta { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; }
+  .date { font: 900 clamp(22px, 3.4vw, 34px)/1 var(--display); }
+  .date small { color: var(--cyan); font-weight: 800; }
+  .lede { color: var(--muted); max-width: 58ch; margin-top: 18px; }
+
+  .btn { text-decoration: none; display: inline-flex; align-items: center; gap: 10px; border: 0; cursor: pointer; border-radius: 10px; padding: 12px 18px; font: 700 15px/1 var(--body); background: var(--panel); border: 1px solid var(--line); transition: background .15s, border-color .15s; white-space: nowrap; }
+  .btn:hover { border-color: var(--cyan); }
+  .btn.primary { background: var(--orange); border-color: var(--orange); color: #fff; font-size: 16px; padding: 15px 22px; }
+  .btn.primary:hover { background: #ff7a35; }
+  .btn .sz { font-weight: 500; opacity: .75; }
+  .btn[aria-busy="true"] { opacity: .6; pointer-events: none; }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+
+  /* sections */
+  section.blk { padding-block: 48px 8px; }
+  .hd { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; margin-bottom: 22px; }
+  .hd h2 { font-size: clamp(24px, 3.4vw, 34px); font-weight: 900; }
+  .hd p { color: var(--muted); max-width: 60ch; margin-top: 6px; }
+  .eyebrow { font: 600 12px/1 var(--body); letter-spacing: .22em; text-transform: uppercase; color: var(--cyan); margin-bottom: 10px; }
+
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); }
+  .item { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+  .item .pv { background: #0e0a2c; display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 3; max-width: 100%; padding: 14px; }
+  .item .pv img { max-height: 100%; max-width: 100%; object-fit: contain; border-radius: 4px; }
+  .item .pv.light { background: #f3f1fa; }
+  .item .pv.violet { background: var(--violet); }
+  .item .bd { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+  .item h3 { font: 700 16px/1.25 var(--body); }
+  .item .spec { color: var(--muted); font-size: 13.5px; font-variant-numeric: tabular-nums; }
+  .item .btn { margin-top: auto; align-self: flex-start; padding: 10px 14px; font-size: 14px; }
+  .item .bd > .btn { margin-top: 12px; }
+
+  /* speakers */
+  .tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 18px; }
+  .search { flex: 1 1 260px; min-width: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; color: var(--fg); font: 500 16px var(--body); }
+  .search::placeholder { color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { cursor: pointer; border-radius: 999px; padding: 8px 14px; background: transparent; border: 1px solid var(--line); font: 600 14px/1 var(--body); color: var(--muted); }
+  .chip[aria-pressed="true"] { background: var(--cyan); border-color: var(--cyan); color: var(--night); }
+  .sgrid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr)); }
+  .sp { color: inherit; text-decoration: none; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; cursor: pointer; text-align: left; padding: 0; display: flex; flex-direction: column; min-width: 0; }
+  .sp:hover { border-color: var(--cyan); }
+  .sp img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; background: #0e0a2c; }
+  .sp .t { padding: 10px 12px 12px; min-width: 0; }
+  .sp .n { font: 700 14.5px/1.25 var(--body); }
+  .sp .a { font: 600 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); margin-top: 6px; }
+  .sp .dl { font: 600 12.5px/1 var(--body); color: var(--orange); margin-top: 8px; }
+  .zips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .count { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+  .empty { color: var(--muted); padding: 24px 0; }
+
+  /* texts */
+  .texts { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+  .tx { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .tx h3 { font: 700 16px/1.25 var(--body); }
+  .tx pre { margin: 0; white-space: pre-wrap; word-wrap: break-word; font: 400 14.5px/1.55 var(--body); color: #e7e3f7; }
+  .tx .btn { align-self: flex-start; padding: 9px 13px; font-size: 14px; }
+  .hash { font: 900 clamp(22px, 3vw, 30px)/1 var(--display); color: var(--cyan); }
+
+  footer { margin-top: 64px; border-top: 1px solid var(--line); }
+  footer .wrap { padding-block: 26px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 14px; }
+
+  .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--fg); color: var(--night); font: 600 15px/1.3 var(--body); padding: 12px 18px; border-radius: 10px; max-width: calc(100% - 32px); z-index: 20; }
+  .note { margin-top: 14px; color: var(--muted); font-size: 14px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+</head>
+<body>
+<header class="hero">
+  <div class="ph" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="logos"><img class="s" src="img/logo-summit-2026-branco.png" alt="PMI-DF Summit 2026"><img class="p" src="img/logo-pmi-df-branco.png" alt="PMI-DF"></div>
+    <div class="bands">
+      <div class="band c"><h1>MEDIA KIT</h1></div>
+      <div class="band v"><span>IMPRENSA · PARCEIROS · PALESTRANTES</span></div>
+    </div>
+    <div class="meta">
+      <div class="date">9 E 10 NOV 2026 <small>· BRASÍLIA</small></div>
+      <a class="btn primary" href="zips/kit-essencial.zip" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16"/></svg>
+        Baixar logos, posts e PDFs <span class="sz">ZIP · 10 MB</span>
+      </a>
+      <a class="btn" href="zips/media-kit-completo-pmi-df-summit-2026.zip" download>Kit completo com os 164 cards <span class="sz">ZIP · 36 MB</span></a>
+    </div>
+    <p class="lede">Logos, posts, capas, fundo de videochamada, PDFs e textos prontos para divulgar o PMI-DF Summit 2026. Os cards dos palestrantes estão logo abaixo, com busca por nome.</p>
+    
+  </div>
+</header>
+
+<main>
+  <section class="blk wrap" aria-labelledby="h-pdf">
+    <div class="hd"><div><div class="eyebrow">PDF</div><h2 id="h-pdf">Documentos</h2></div></div>
+    <div class="grid" id="g-pdf"></div>
+  </section>
+
+  <section class="blk wrap" aria-labelledby="h-logo">
+    <div class="hd"><div><div class="eyebrow">PNG transparente</div><h2 id="h-logo">Logos</h2><p>Branco para fundos escuros, escuro para fundos claros, roxo para peças com fundo branco que pedem a cor da marca.</p></div></div>
+    <div class="grid" id="g-logo"></div>
+  </section>
+
+  <section class="blk wrap" aria-labelledby="h-soc">
+    <div class="hd"><div><div class="eyebrow">Imagens</div><h2 id="h-soc">Redes sociais</h2><p>Feed para Instagram e LinkedIn, stories com o texto fora da área coberta pela interface e capas de LinkedIn com o lado esquerdo livre para a foto de perfil.</p></div></div>
+    <div class="grid" id="g-soc"></div>
+  </section>
+
+  <section class="blk wrap" aria-labelledby="h-sp">
+    <div class="hd"><div><div class="eyebrow">JPG · 1080×1350</div><h2 id="h-sp">Cards dos palestrantes</h2><p>Clique no card para baixar a versão em alta resolução.</p></div><div class="count" id="count"></div></div>
+    <div class="tools">
+      <input id="q" class="search" type="search" placeholder="Buscar palestrante pelo nome" aria-label="Buscar palestrante pelo nome" autocomplete="off">
+      <div class="chips" id="chips" role="group" aria-label="Filtrar por trilha"></div>
+    </div>
+    <div class="sgrid" id="sgrid"></div>
+    <div class="zips" id="zips"></div>
+  </section>
+
+  <section class="blk wrap" aria-labelledby="h-bg">
+    <div class="hd"><div><div class="eyebrow">Imagens</div><h2 id="h-bg">Fundo e assinatura</h2></div></div>
+    <div class="grid" id="g-bg"></div>
+  </section>
+
+  <section class="blk wrap" aria-labelledby="h-tx">
+    <div class="hd"><div><div class="eyebrow">Copiar e colar</div><h2 id="h-tx">Textos prontos</h2><p>Hashtag oficial: <span class="hash">#PMIDFSummit2026</span></p></div>
+      <a class="btn" href="kit/06-textos/textos-prontos.txt" download="textos-prontos-pmi-df-summit-2026.txt">Baixar todos <span class="sz">TXT</span></a></div>
+    <div class="texts" id="texts"></div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>PMI-DF Summit 2026 · 9 e 10 de novembro · Brasília</span><span>summit.pmidf.org</span></div></footer>
+
+<script>
+const SPEAKERS = [{"id":"agros-leandro","n":"Agros Leandro","c":"Gerente de Projetos Sr","a":"Tecnologia"},{"id":"ailton-maciel","n":"Ailton Maciel","c":"CEO da NINA IA","a":"Tecnologia"},{"id":"aldo-mendes","n":"Aldo Mendes","c":"Especialista em Inteligência Artificial e LLMs","a":"Tecnologia"},{"id":"alexander-machado","n":"Alexander Machado","c":"Consultor de Projetos - EPEx","a":"Governo"},{"id":"alexandre-travassos","n":"Alexandre Travassos","c":"Gerente Executivo na CAIXA","a":"Engenharia"},{"id":"amanda-machado","n":"Amanda Machado","c":"Felicidade e Bem-Estar no Trabalho","a":"Pessoas"},{"id":"ana-baumotte","n":"Ana Baumotte","c":"Consultora DC-DinsmoreCompass","a":"Pessoas"},{"id":"ana-carolina-steinkopf","n":"Ana Carolina Steinkopf","c":"Especialista em Musicoterapia Neurológica, negócios de impacto e inovação social","a":"Pessoas"},{"id":"ana-cristine-machado","n":"Ana Cristine Machado","c":"Gerente de Projetos","a":"Tecnologia"},{"id":"ana-pansini","n":"Ana Pansini","c":"Líder do PMO-ES - Governo ES","a":"Governo"},{"id":"ana-slechticius","n":"Ana Slechticius","c":"IT Sr Manager-AI Orchestrator","a":"Tecnologia"},{"id":"anderson-hummel","n":"Anderson Hummel","c":"CEO","a":"Tecnologia"},{"id":"anderson-sales","n":"Anderson Sales","c":"CEO JUMP","a":"Pessoas"},{"id":"antonio-muniz","n":"Antonio Muniz","c":"Mestre em Administração","a":"Tecnologia"},{"id":"arthur-prates","n":"Arthur Prates","c":"Gestor de Inovação - Sebrae NA","a":"Engenharia"},{"id":"carlos-augusto-freitas","n":"Carlos Augusto Freitas","c":"Strategy & Project Management Specialist","a":"Tecnologia"},{"id":"carlos-jacobino","n":"Carlos Jacobino","c":"Fundador: ISG Participações SA","a":"Tecnologia"},{"id":"carlos-martins","n":"Carlos Martins","c":"Head de Dados","a":"Tecnologia"},{"id":"carlos-mendes","n":"Carlos Mendes","c":"CEO Flowsolutions/Presi ICTEXP","a":"Tecnologia"},{"id":"carlos-silva-jr","n":"Carlos Silva Jr","c":"Mentor e Estrategista","a":"Pessoas"},{"id":"carolina-boros","n":"Carolina Boros","c":"Escritora","a":"Governo"},{"id":"christian-martins","n":"Christian Martins","c":"Superintendente de Projetos / Itaminas","a":"Engenharia"},{"id":"christina-barbosa","n":"Christina Barbosa","c":"Gestão de Sustentabilidade","a":"Engenharia"},{"id":"claudia-sousa","n":"Claudia Sousa","c":"Assessora Técnica do MPF","a":"Tecnologia"},{"id":"claudio-boros","n":"Claudio Boros","c":"CFO do Grupo Plano","a":"Tecnologia"},{"id":"cristiano-gontijo-silva","n":"Cristiano Gontijo Silva","c":"Coordenador-Geral de TIC e Analista de Infraestrutura / Governo Federal","a":"Governo"},{"id":"cintia-guberovic","n":"Cíntia Guberovic","c":"Superintendente de Governança, Planejamento e Performance Estratégica / Pagbank","a":"Pessoas"},{"id":"dalton-leca","n":"Dalton Leça","c":"Head de Estratégia e Agilidade","a":"Pessoas"},{"id":"daniella-carvalho","n":"Daniella Carvalho","c":"Gerente de Engenharia / Neon","a":"Tecnologia"},{"id":"davi-rossiter","n":"Davi Rossiter","c":"Superintendente - BRB","a":"Governo"},{"id":"deislane-gama","n":"Deislane Gama","c":"Gerente de Produtos","a":"Pessoas"},{"id":"diego-albuquerque","n":"Diego Albuquerque","c":"Gerente do SENAI Gama","a":"Pessoas"},{"id":"diego-rezende","n":"Diego Rezende","c":"Ouvidor-Geral / Hu Brasil","a":"Governo"},{"id":"diovani-armani","n":"Diovani Armani","c":"Gerente e Consultor de Projetos","a":"Tecnologia"},{"id":"dyogo-rocha","n":"Dyogo Rocha","c":"Coordenador-Geral de Gestão de Pessoas / DNIT","a":"Pessoas"},{"id":"eduardo-zanini","n":"Eduardo Zanini","c":"Advisor em Estratégia e gestão","a":"Pessoas"},{"id":"elzi-araujo-de-matos","n":"Elzi Araujo de Matos","c":"CEO Matos Engenharia Segurança","a":"Engenharia"},{"id":"emerson-dantas","n":"Emerson Dantas","c":"O Nerd de processos","a":"Pessoas"},{"id":"erica-smith","n":"Erica Smith","c":"Head PMO Estratégico - SERPRO","a":"Governo"},{"id":"esteban-ribas","n":"Esteban Ribas","c":"Sales @SquadHub| SQL & Customer Analytics","a":"Pessoas"},{"id":"estefanio-pereira","n":"Estefânio Pereira","c":"Doutor","a":"Tecnologia"},{"id":"fabiana-dornelles","n":"Fabiana Dornelles","c":"Superintendente dos PMOs do Estado de Goiás","a":"Governo"},{"id":"fabiana-lira","n":"Fabiana Lira","c":"Coordenadora de Engenharia de Software / PicPay","a":"Tecnologia"},{"id":"fabio-guisso","n":"Fabio Guisso","c":"CEO da Multi Núcleo","a":"Engenharia"},{"id":"farhad-abdollahyan","n":"Farhad Abdollahyan","c":"Pesquisador e Consultor em Portfólios","a":"Governo"},{"id":"fausto-de-andrade-ribeiro","n":"Fausto de Andrade Ribeiro","c":"Chairman","a":"Engenharia"},{"id":"felipe-cruz","n":"Felipe Cruz","c":"Coordenador-geral de Estruturação de Dados Sociais / MGI","a":"Governo"},{"id":"felipe-melo","n":"Felipe Melo","c":"Gestor de projetos","a":"Engenharia"},{"id":"fernanda-mujica","n":"Fernanda Mujica","c":"Staff UX Researcher","a":"Engenharia"},{"id":"fernando-coelho-mitkiewicz","n":"Fernando Coelho Mitkiewicz","c":"CIO, Professor e Palestrante","a":"Governo"},{"id":"filipe-villar","n":"Filipe Villar","c":"Founder/CEO Shield Consulting","a":"Tecnologia"},{"id":"flavia-paz","n":"Flávia Paz","c":"CIO - DPU","a":"Governo"},{"id":"flavio-wernik","n":"Flávio Wernik","c":"Gerente de Soluções","a":"Pessoas"},{"id":"francisco-junior","n":"Francisco Junior","c":"Gerente de Atendimento Integrado da RNP","a":"Pessoas"},{"id":"francisco-de-abreu","n":"Francisco de Abreu","c":"Ex presidente PMI DF","a":"Governo"},{"id":"gabriel-fiuza","n":"Gabriel Fiuza","c":"Sócio fundador da Primora","a":"Tecnologia"},{"id":"gabriel-resende","n":"Gabriel Resende","c":"Coordenador Geral de Sistemas","a":"Governo"},{"id":"gabriel-vaz","n":"Gabriel Vaz","c":"CEO do Movimento 10K","a":"Tecnologia"},{"id":"gabriel-de-jesus","n":"Gabriel de Jesus","c":"Líder do Projeto Hermes / Embratur","a":"Governo"},{"id":"gerdane-soares","n":"Gerdane Soares","c":"Consultora na Ari Prospecção","a":"Engenharia"},{"id":"gilcimar-dias","n":"Gilcimar Dias","c":"Gerente de Desenvolvimento","a":"Governo"},{"id":"gilson-reis","n":"Gilson Reis","c":"Gerente Excelência Operacional","a":"Engenharia"},{"id":"glauciane-souza","n":"Glauciane Souza","c":"Gestão Estratégica de Projetos","a":"Engenharia"},{"id":"glaucia-reis","n":"Gláucia Reis","c":"Sr IT Manage","a":"Tecnologia"},{"id":"gruwer-iuri","n":"Gruwer Iuri","c":"Gerente Executivo de Suprimentos e Gestão de Contratos","a":"Tecnologia"},{"id":"gustavo-portella","n":"Gustavo Portella","c":"Diretor de TI da CAPES/MEC","a":"Governo"},{"id":"helder-vitorino","n":"Helder Vitorino","c":"Gerente de Soluções na RNP.","a":"Pessoas"},{"id":"henrique-diniz","n":"Henrique Diniz","c":"PMI Global LATAM Construction Ambassador","a":"Engenharia"},{"id":"hillana-silva","n":"Hillana Silva","c":"PMO Estratégico Vale","a":"Pessoas"},{"id":"humberto-fukuda","n":"Humberto Fukuda","c":"Diretor de IA / Oracle Latam","a":"Engenharia"},{"id":"hewelyn-nery","n":"Héwelyn Nery","c":"HR Business Partner Sênior","a":"Pessoas"},{"id":"igor-bordallo","n":"Igor Bordallo","c":"Engenheiro de Produção / Lean","a":"Engenharia"},{"id":"ilona-wirth","n":"Ilona Wirth","c":"Diretora Criativa","a":"Pessoas"},{"id":"isaac-marti","n":"Isaac Martí","c":"G.Projetos de Gestão de Riscos","a":"Tecnologia"},{"id":"isabela-gayno","n":"Isabela Gayno","c":"Chief of Staff | PriorizA","a":"Pessoas"},{"id":"jody-silva","n":"Jody Silva","c":"Líder de Projetos Estratégicos","a":"Tecnologia"},{"id":"joedson-camilo","n":"Joedson Camilo","c":"Diretor Nacional de TIC / PRF","a":"Governo"},{"id":"jose-alves","n":"José Alves","c":"Dir de Operações na Emgea S.A.","a":"Engenharia"},{"id":"jose-bezerra","n":"José Bezerra","c":"CEO da Business School Brasil (BSBr)","a":"Pessoas"},{"id":"joao-barros","n":"João Barros","c":"Desenvolvedor Sênior / Embratur","a":"Governo"},{"id":"joao-mota","n":"João Mota","c":"Diretor do Instituto Publix","a":"Governo"},{"id":"julia-bravo","n":"Julia Bravo","c":"Gerente transformação e inovação","a":"Pessoas"},{"id":"karoll-ramos","n":"Karoll Ramos","c":"Proprietária da Explain 360","a":"Governo"},{"id":"katia-tancon","n":"Katia Tancon","c":"Gerente de Governança da ANTT","a":"Engenharia"},{"id":"kelly-iwanow","n":"Kelly Iwanow","c":"Gerente de Projetos | PO Eng","a":"Pessoas"},{"id":"kelly-moraes","n":"Kelly Moraes","c":"Coordenadora PMO da RNP","a":"Tecnologia"},{"id":"lamberto-ricarte","n":"Lamberto Ricarte","c":"Especialista em Projetos – CD","a":"Governo"},{"id":"larissa-herculano","n":"Larissa Herculano","c":"Chefe do CGULab","a":"Governo"},{"id":"laura-picoli","n":"Laura Picoli","c":"Mestre, servidora e consultora em Governança","a":"Governo"},{"id":"laury-amaral","n":"Laury Amaral","c":"CEO","a":"Pessoas"},{"id":"leandro-carneiro","n":"Leandro Carneiro","c":"Coordenador do Núcleo de IA do Instituto de Criminalística / PCDF","a":"Governo"},{"id":"leonardo-adonis","n":"Leonardo Adonis","c":"COO da SquadHub","a":"Pessoas"},{"id":"leonardo-haag","n":"Leonardo Haag","c":"CEO Mirai; Founder Infinita","a":"Tecnologia"},{"id":"louize-oliveira","n":"Louize Oliveira","c":"Gerente de Estratégia, Sicoob","a":"Pessoas"},{"id":"luana-costa","n":"Luana Costa","c":"Psicóloga Clínica","a":"Pessoas"},{"id":"luana-frasson","n":"Luana Frasson","c":"Diretora do DRF / Secretaria de Obras Públicas–RS","a":"Governo"},{"id":"lucas-marques","n":"Lucas Marques","c":"CEO Toric","a":"Pessoas"},{"id":"luis-eduardo-franca","n":"Luis Eduardo França","c":"Senior Manager","a":"Tecnologia"},{"id":"luiz-fernando-castilho","n":"Luiz Fernando Castilho","c":"Diretor na Presidência da Rep.","a":"Governo"},{"id":"luiz-santos","n":"Luiz Santos","c":"Dir. Eng., Costrução/Incorp.","a":"Engenharia"},{"id":"luis-campos","n":"Luís Campos","c":"Gerente de projetos inovação","a":"Governo"},{"id":"lilian-araujo","n":"Lílian Araújo","c":"Gerente","a":"Pessoas"},{"id":"marcelo-antonelli","n":"Marcelo Antonelli","c":"CEO VMO Expert","a":"Tecnologia"},{"id":"marcelo-quintao","n":"Marcelo Quintão","c":"Gerente de Projetos","a":"Engenharia"},{"id":"marcelo-silva","n":"Marcelo Silva","c":"Gerente Sistemas de Informação","a":"Tecnologia"},{"id":"marcelo-de-araujo","n":"Marcelo de Araujo","c":"Engenheiro de Gestão de Ativos","a":"Engenharia"},{"id":"marcos-gurgel","n":"Marcos Gurgel","c":"Diretor Global de Inovação","a":"Tecnologia"},{"id":"margareth-carneiro","n":"Margareth Carneiro","c":"PMI Fellow & Agile Alliance","a":"Pessoas"},{"id":"maria-luiza","n":"Maria Luiza","c":"Gestora de projetos ágeis e IA","a":"Tecnologia"},{"id":"mariana-pereira","n":"Mariana Pereira","c":"CBPP-Analista de Processos RNP","a":"Engenharia"},{"id":"mariana-santis-sampaio-mattos","n":"Mariana Santis Sampaio Mattos","c":"Enf Especialista Saúde Digital","a":"Pessoas"},{"id":"mariana-vidal","n":"Mariana Vidal","c":"Coordenadora-Geral no MCTI","a":"Tecnologia"},{"id":"marina-medeiros","n":"Marina Medeiros","c":"Coordenadora de Gestão Moderna","a":"Tecnologia"},{"id":"mario-trentim","n":"Mario Trentim","c":"PMI Board of Directors","a":"Keynote"},{"id":"mayra-de-souza","n":"Mayra de Souza","c":"CEO & Founder do Coletivo Ação","a":"Pessoas"},{"id":"michel-camelo","n":"Michel Camelo","c":"Oficial da Marinha do Brasil","a":"Governo"},{"id":"michel-kumakawa","n":"Michel Kumakawa","c":"Head de Gestão de Projetos na Bosch Integrated Solutions","a":"Tecnologia"},{"id":"michele-fontes-barbosa","n":"Michele Fontes Barbosa","c":"MsC Gestão | Bac.Eng. Elétrica","a":"Engenharia"},{"id":"mickaella-queiroz","n":"Mickaella Queiroz","c":"Analista de TI","a":"Case"},{"id":"mirian-bittencourt","n":"Mirian Bittencourt","c":"Diretora de Governança e Inteligência de Dados / MGI","a":"Pessoas"},{"id":"murilo-durigan","n":"Murilo Durigan","c":"Comunicação & Branding","a":"Pessoas"},{"id":"marcia-doring","n":"Márcia Dóring","c":"Fundadora","a":"Engenharia"},{"id":"mercia-monteiro","n":"Mércia Monteiro","c":"Coordenadora Cultura e Clima","a":"Pessoas"},{"id":"natalia-tavares","n":"Natalia Tavares","c":"Head of Community, PMI LATAM","a":"Pessoas"},{"id":"nathalia-lemes","n":"Nathalia Lemes","c":"Embaixadora Global PMI-CP","a":"Engenharia"},{"id":"nadila-osana-nereu-gomes","n":"Nádila Osana Nereu Gomes","c":"Gerente de Projetos","a":"Case"},{"id":"odilon-oliveira","n":"Odilon Oliveira","c":"Parceiro de Negócios Nina IA","a":"Tecnologia"},{"id":"olivio-balbino","n":"Olívio Balbino","c":"Engenheiro Eletrônico","a":"Engenharia"},{"id":"osvaldo-pedra","n":"Osvaldo Pedra","c":"Consultor","a":"Engenharia"},{"id":"patricia-gomes","n":"Patrícia Gomes","c":"Diretora comercial","a":"Tecnologia"},{"id":"paulo-brunet","n":"Paulo Brunet","c":"Coord. de Rel. Instit. da AEB","a":"Governo"},{"id":"paulo-evelton","n":"Paulo Evelton","c":"Pesquisador BB Doutorando UnB","a":"Tecnologia"},{"id":"percy-amorim","n":"Percy Amorim","c":"Portfolio Manager","a":"Pessoas"},{"id":"polyanna-valente","n":"Polyanna Valente","c":"Coordenadora Governança de TI","a":"Governo"},{"id":"priscilla-souza-ramos-alves","n":"Priscilla Souza Ramos Alves","c":"Mestre em Gestão de Riscos","a":"Governo"},{"id":"raphael-van-der-broocke-mello-pompeu","n":"Raphael van der Broocke Mello Pompeu","c":"Major Broocke/Porta-voz PMDF","a":"Governo"},{"id":"raquel-carrilho","n":"Raquel Carrilho","c":"Executive Automation na IBM","a":"Tecnologia"},{"id":"raquelline-picoli","n":"Raquelline Picoli","c":"Diretora DFPD/SOP","a":"Governo"},{"id":"regina-trindade","n":"Regina Trindade","c":"Especialista em Comunicação","a":"Pessoas"},{"id":"renato-santos","n":"Renato Santos","c":"CEO da Moai Participações","a":"Tecnologia"},{"id":"ricardo-vargas","n":"Ricardo Vargas","c":"Global Leader in Project Management","a":"Tecnologia"},{"id":"roberta-sa","n":"Roberta Sá","c":"Superintendente de Modernização e Inovação / SETD-RJ","a":"Governo"},{"id":"roberto-miguel","n":"Roberto Miguel","c":"Coordenador de Pós-Graduação em Gestão de Projetos / BSSP","a":"Engenharia"},{"id":"rodrigo-barbosa","n":"Rodrigo Barbosa","c":"Mentor de Negócios","a":"Pessoas"},{"id":"rodrigo-barros","n":"Rodrigo Barros","c":"Customer Success Egeneer","a":"Engenharia"},{"id":"rodrigo-fregonasse","n":"Rodrigo Fregonasse","c":"Fundador da Cotia","a":"Engenharia"},{"id":"sabrina-neves","n":"Sabrina Neves","c":"Coordenadora de Gestão Pedagógica e Mentor de negócios","a":"Pessoas"},{"id":"samira-tavares","n":"Samira Tavares","c":"Sócia, Consultora e Trainer","a":"Tecnologia"},{"id":"sanderson-dias","n":"Sanderson Dias","c":"Head de Planejamento na Promon","a":"Engenharia"},{"id":"sephora-ceolin","n":"Sephora Ceolin","c":"Co-founder Zoonk.com","a":"Pessoas"},{"id":"sidney-brito","n":"Sidney Brito","c":"Sócio do Instituto Devir","a":"Engenharia"},{"id":"simone-monteiro","n":"Simone Monteiro","c":"Profa da UnB, Dep Eng. Prod.","a":"Engenharia"},{"id":"sthefano-cordeiro","n":"Sthéfano Cordeiro","c":"Especialista","a":"Governo"},{"id":"sergio-faria","n":"Sérgio Faria","c":"Superintendente de Projetos","a":"Engenharia"},{"id":"tamara-braga","n":"Tamara Braga","c":"Fundadora da DiverCidade HUB","a":"Pessoas"},{"id":"thiago-roque","n":"Thiago Roque","c":"Agile Coach and Program Manager","a":"Engenharia"},{"id":"tiago-oliveira","n":"Tiago Oliveira","c":"Diretor de Planejamento, Inovação e Sustentabilidade / CGU","a":"Governo"},{"id":"udy-ferreira","n":"Udy Ferreira","c":"Parceiro de Negócios Nina IA","a":"Tecnologia"},{"id":"vera-lopes","n":"Vera Lopes","c":"Especialista em Governança","a":"Governo"},{"id":"vinicius-piccini","n":"Vinícius Piccini","c":"Arquiteto, PMP, PMI-PMOCP","a":"Engenharia"},{"id":"viviane-herica","n":"Viviane Hérica","c":"Pres. ABPMP | Inovação & BPM","a":"Governo"},{"id":"viviane-moura","n":"Viviane Moura","c":"Gerente de TI","a":"Tecnologia"},{"id":"wang-ching","n":"Wang Ching","c":"NPPQ ǀ SCRUM Master ǀ PCC/ICF","a":"Pessoas"},{"id":"erica-cazarin","n":"Érica Cazarin","c":"PMO","a":"Governo"}];
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const DL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16"/></svg>';
+
+const item = ({ pv, bg = "", title, spec, path, name }) => `<div class="item"><div class="pv ${bg}"><img src="${pv}" alt="" loading="lazy"></div>
+  <div class="bd"><h3>${title}</h3><div class="spec">${spec}</div><a class="btn" href="${path}" download="${name || path.split("/").pop()}">${DL} Baixar</a></div></div>`;
+
+$("#g-pdf").innerHTML = [
+  { pv: "previews/media-kit-pdf.jpg", title: "Media kit", spec: "4 páginas A4 · evento, marca e materiais · 0,7 MB", path: "kit/05-pdf/media-kit-pmi-df-summit-2026.pdf" },
+  { pv: "previews/guia-pdf.jpg", title: "Guia de palestrantes", spec: "A4 · 164 palestrantes por trilha · 4,6 MB", path: "kit/05-pdf/guia-de-palestrantes-pmi-df-summit-2026.pdf" },
+].map(item).join("");
+
+const L = "kit/01-logos/";
+$("#g-logo").innerHTML = [
+  ["logo-summit-2026-branco.png", "", "PMI-DF Summit 2026 · branco"], ["logo-summit-2026-escuro.png", "light", "PMI-DF Summit 2026 · escuro"], ["logo-summit-2026-roxo.png", "light", "PMI-DF Summit 2026 · roxo"],
+  ["logo-pmi-df-branco.png", "violet", "PMI-DF · branco"], ["logo-pmi-df-escuro.png", "light", "PMI-DF · escuro"], ["logo-pmi-df-roxo.png", "light", "PMI-DF · roxo"],
+].map(([f, bg, t]) => item({ pv: L + f, bg, title: t, spec: "PNG transparente", path: L + f })).join("");
+
+const R = "kit/02-redes-sociais/";
+$("#g-soc").innerHTML = [
+  ["eu-vou-feed-1080x1350", "“Eu vou!” · feed", "1080×1350"], ["eu-vou-story-1080x1920", "“Eu vou!” · stories", "1080×1920"],
+  ["estou-aqui-feed-1080x1350", "“Estou aqui!” · feed", "1080×1350 · para postar durante o evento"], ["estou-aqui-story-1080x1920", "“Estou aqui!” · stories", "1080×1920 · para postar durante o evento"],
+  ["linkedin-capa-eu-vou-1584x396", "Capa LinkedIn · “Eu vou!”", "1584×396"], ["linkedin-capa-palestrante-1584x396", "Capa LinkedIn · palestrante", "1584×396"],
+].map(([f, t, s]) => item({ pv: `previews/${f}.jpg`, title: t, spec: "PNG · " + s, path: R + f + ".png" })).join("");
+
+const B = "kit/04-fundos-e-assinatura/";
+$("#g-bg").innerHTML = [
+  item({ pv: "previews/fundo-videochamada-1920x1080.jpg", title: "Fundo de videochamada", spec: "PNG · 1920×1080 · Teams, Zoom e Meet", path: B + "fundo-videochamada-1920x1080.png" }),
+  item({ pv: "previews/assinatura-email-600x150@2x.jpg", title: "Assinatura de e-mail", spec: "PNG · insira com 600 px de largura e link para summit.pmidf.org", path: B + "assinatura-email-600x150@2x.png" }),
+].join("");
+
+// speakers
+const AREAS = [["Todas", null], ["Pessoas", ["Pessoas"]], ["Tecnologia", ["Tecnologia"]], ["Governo", ["Governo"]], ["Engenharia", ["Engenharia"]], ["Keynote e cases", ["Keynote", "Case"]]];
+let area = 0;
+const norm = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+$("#chips").innerHTML = AREAS.map(([t], i) => `<button class="chip" data-i="${i}" aria-pressed="${i === 0}">${t}</button>`).join("");
+$("#chips").addEventListener("click", (e) => { const b = e.target.closest(".chip"); if (!b) return; area = +b.dataset.i;
+  document.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", c === b)); renderSp(); });
+$("#q").addEventListener("input", renderSp);
+function renderSp() {
+  const q = norm($("#q").value.trim()), A = AREAS[area][1];
+  const list = SPEAKERS.filter((s) => (!A || A.includes(s.a)) && (!q || norm(s.n).includes(q)));
+  $("#count").textContent = `${list.length} de ${SPEAKERS.length} palestrantes`;
+  $("#sgrid").innerHTML = list.length ? list.map((s) => `<a class="sp" href="kit/03-palestrantes/${s.id}.jpg" download="palestrante-${s.id}-pmi-df-summit-2026.jpg">
+    <img src="thumbs/${s.id}.jpg" alt="" loading="lazy"><div class="t"><div class="n">${esc(s.n)}</div><div class="a">${s.a === "Case" ? "Case" : s.a}</div><div class="dl">Baixar card</div></div></a>`).join("")
+    : `<div class="empty">Nenhum palestrante com esse nome. Confira a grafia ou escolha “Todas”.</div>`;
+}
+renderSp();
+$("#zips").innerHTML = '<span class="count" style="align-self:center">Todos os cards de uma trilha:</span>' + [
+  ["pessoas", "Pessoas", "7,4"], ["tecnologia", "Tecnologia", "7,7"], ["governo", "Governo", "7,2"], ["engenharia", "Engenharia", "6,1"], ["keynote-e-cases", "Keynote e cases", "0,6"],
+].map(([f, t, mb]) => `<a class="btn" href="zips/cards-${f}.zip" download="cards-palestrantes-${f}-pmi-df-summit-2026.zip">${DL} ${t} <span class="sz">ZIP · ${mb} MB</span></a>`).join("");
+
+// texts
+const TEXTS = [
+  ["Release curto", `PMI-DF Summit 2026 reúne 164 palestrantes em Brasília
+
+Nos dias 9 e 10 de novembro de 2026, Brasília recebe o PMI-DF Summit 2026, o maior encontro de gestão de projetos do Distrito Federal. Realizado pelo PMI Distrito Federal, capítulo do Project Management Institute que completa 25 anos de atuação na capital, o evento reúne 164 palestrantes em quatro trilhas de conteúdo: Pessoas, Tecnologia, Governo e Engenharia.
+
+A programação traz keynote de Mario Trentim, do PMI Board of Directors, além de cases práticos e palestras sobre inteligência artificial, agilidade, liderança, governança e transformação digital no setor público e privado.
+
+Mais informações e inscrições: summit.pmidf.org`],
+  ["Legenda “Eu vou!”", `Nos dias 9 e 10 de novembro estarei no PMI-DF Summit 2026, o maior encontro de gestão de projetos do DF. São dois dias de conteúdo sobre pessoas, tecnologia, governo e engenharia, com 164 palestrantes. Vem junto!
+Inscrições: summit.pmidf.org
+#PMIDFSummit2026 #GestãoDeProjetos #PMI`],
+  ["Legenda “Estou aqui!”", `Hoje estou no PMI-DF Summit 2026, em Brasília! Dois dias de troca com quem faz gestão de projetos acontecer no DF. Me chama aqui se você também estiver no evento.
+#PMIDFSummit2026 #GestãoDeProjetos #PMI`],
+  ["Legenda para palestrantes", `Tenho a alegria de anunciar que sou palestrante no PMI-DF Summit 2026, nos dias 9 e 10 de novembro, em Brasília. Vou falar sobre [TEMA DA SUA PALESTRA] na trilha [SUA TRILHA].
+Te espero lá! Inscrições: summit.pmidf.org
+#PMIDFSummit2026 #GestãoDeProjetos #PMI`],
+  ["Post para LinkedIn", `Gestão de projetos é o que transforma estratégia em resultado. E nos dias 9 e 10 de novembro, Brasília recebe o maior encontro sobre o tema no DF: o PMI-DF Summit 2026.
+
+São 164 palestrantes em quatro trilhas (Pessoas, Tecnologia, Governo e Engenharia), com keynote de Mario Trentim, do PMI Board of Directors.
+
+Eu vou. E você?
+summit.pmidf.org
+#PMIDFSummit2026`],
+];
+$("#texts").innerHTML = TEXTS.map(([t, b], i) => `<div class="tx"><h3>${t}</h3><pre id="tx${i}">${esc(b)}</pre><button class="btn" data-copy="${i}">Copiar texto</button></div>`).join("");
+
+// toast
+let tt;
+function toast(m) { let el = $(".toast"); if (!el) { el = document.createElement("div"); el.className = "toast"; el.setAttribute("role", "status"); document.body.appendChild(el); }
+  el.textContent = m; el.hidden = false; clearTimeout(tt); tt = setTimeout(() => { el.hidden = true; }, 2800); }
+
+document.addEventListener("click", async (e) => {
+  const c = e.target.closest("[data-copy]");
+  if (!c) return;
+  const pre = document.getElementById("tx" + c.dataset.copy);
+  try { await navigator.clipboard.writeText(pre.textContent); toast("Texto copiado"); }
+  catch { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast("Texto selecionado. Use Copiar do seu teclado."); }
+});
+</script>
+
+</body>
+</html>
