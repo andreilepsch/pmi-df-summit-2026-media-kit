@@ -127,7 +127,7 @@
   .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--fg); color: var(--night); font: 600 15px/1.3 var(--body); padding: 12px 18px; border-radius: 10px; max-width: calc(100% - 32px); z-index: 20; }
   .note { margin-top: 14px; color: var(--muted); font-size: 14px; }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-.filtro{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:28px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}.filtro-img img{display:block;width:100%;height:auto;border-radius:12px}@media (max-width:560px){.filtro{grid-template-columns:1fr}.filtro-img{max-width:200px}}
+.filtro{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:28px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}.filtro-img{display:grid;grid-template-columns:1fr 1fr;gap:10px}.filtro-img img{display:block;width:100%;height:auto;border-radius:12px}@media (max-width:560px){.filtro{grid-template-columns:1fr}.filtro-img{max-width:340px}}
 </style>
 
 </head>
@@ -156,15 +156,17 @@
 <main>
   <section class="blk wrap" aria-labelledby="h-filtro">
     <div class="filtro">
-      <a class="filtro-img" href="estive-aqui/"><img src="estive-aqui/preview.jpg" alt="Foto com a moldura Estive aqui! no PMI-DF Summit 2026" width="360" height="640" loading="lazy"></a>
+      <a class="filtro-img" href="estive-aqui/"><img src="estive-aqui/preview.jpg" alt="Moldura Estive aqui! do PMI-DF Summit 2026" width="360" height="640" loading="lazy"><img src="estive-aqui/preview-palco.jpg" alt="Moldura Agora no Palco 360° do PMI-DF Summit 2026" width="360" height="640" loading="lazy"></a>
       <div>
         <div class="eyebrow">Novo · para postar no evento</div>
-        <h2 id="h-filtro" style="font-size:clamp(28px,4.4vw,44px);font-weight:900;line-height:1.05">Filtro “Estive aqui!”</h2>
-        <p style="color:var(--muted);max-width:52ch;margin:10px 0 18px">Escolha uma foto, ajuste o enquadramento e poste nos stories ou no feed com a moldura do PMI-DF Summit 2026. Funciona direto no celular.</p>
+        <h2 id="h-filtro" style="font-size:clamp(28px,4.4vw,44px);font-weight:900;line-height:1.05">Molduras para foto</h2>
+        <p style="color:var(--muted);max-width:52ch;margin:10px 0 18px">Duas molduras, “Estive aqui!” e “Agora no Palco 360°”, com o apoio da FAPDF. Escolha uma foto, ajuste o enquadramento e poste nos stories ou no feed. Funciona direto no celular.</p>
         <div style="display:flex;flex-wrap:wrap;gap:10px">
-          <a class="btn primary" href="estive-aqui/">Abrir o filtro</a>
-          <a class="btn" href="estive-aqui/moldura-story-1080x1920.png" download>Moldura stories <span class="sz">PNG</span></a>
-          <a class="btn" href="estive-aqui/moldura-feed-1080x1350.png" download>Moldura feed <span class="sz">PNG</span></a>
+          <a class="btn primary" href="estive-aqui/">Abrir o filtro de fotos</a>
+          <a class="btn" href="estive-aqui/moldura-story-1080x1920.png" download>Estive aqui! · stories <span class="sz">PNG</span></a>
+          <a class="btn" href="estive-aqui/moldura-feed-1080x1350.png" download>Estive aqui! · feed <span class="sz">PNG</span></a>
+          <a class="btn" href="estive-aqui/moldura-palco-story-1080x1920.png" download>Palco 360° · stories <span class="sz">PNG</span></a>
+          <a class="btn" href="estive-aqui/moldura-palco-feed-1080x1350.png" download>Palco 360° · feed <span class="sz">PNG</span></a>
         </div>
       </div>
     </div>
